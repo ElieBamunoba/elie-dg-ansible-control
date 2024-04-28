@@ -20,7 +20,7 @@
     //     } else {
     //         message.classList.remove('show');
     //     }
-        
+
     //     return valid;
     // }
 
@@ -43,11 +43,11 @@
             message.fadeOut();
         }, 3000);
     }
-    
+
     form.submit(function (e) {
         e.preventDefault();
 
-        
+
         const message = document.getElementById('required-msg');
 
         const fullName = document.getElementById("full-name");
@@ -71,5 +71,5 @@
         .done(done_func)
         .fail(fail_func);
     });
-    
+
 })(jQuery);
