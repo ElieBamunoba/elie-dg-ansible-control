@@ -1,0 +1,8 @@
+---
+- name: Install Essential tools
+  hosts: all
+  become: true
+  roles:
+    - dg_linux
+    
+

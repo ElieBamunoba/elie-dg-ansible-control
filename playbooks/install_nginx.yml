@@ -1,7 +1,0 @@
----
-- name: Install Nginx using Role
-  hosts: localhost
-  become: true
-  roles:
-    - nginx_install
-
