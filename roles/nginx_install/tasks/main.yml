@@ -1,0 +1,12 @@
+---
+# tasks file for nginx_install
+- name: Install Nginx
+  package:
+    name: nginx
+    state: present
+
+- name: Start Nginx service
+  service:
+    name: nginx
+    state: started
+    enabled: yes

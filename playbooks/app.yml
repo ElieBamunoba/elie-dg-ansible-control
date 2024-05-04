@@ -1,8 +1,0 @@
-- name: Deploy application to servers
-  hosts: app
-  become: true
-  vars:
-    app_port: 80
-    app_root: /home/ubuntu/dg-web-portfolio/template
-  roles:
-    - app
