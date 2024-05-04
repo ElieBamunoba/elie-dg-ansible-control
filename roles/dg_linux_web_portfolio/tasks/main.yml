@@ -1,0 +1,18 @@
+---
+# tasks file for dg_linux_web_portfolio
+- name: Update apt cache
+  become: yes
+  apt:
+    update_cache: yes
+
+- name: Ensure /etc/nginx/sites-enabled/default is absent
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+- name: Copy Nginx configuration
+  template:
+    src: portfolio.deployguru.com.j2
+    dest: /etc/nginx/sites-enabled/portfolio.deployguru.com
+  notify:
+    - restart-nginx
